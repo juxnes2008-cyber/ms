@@ -1,0 +1,57 @@
+<!-- BARRA SUPERIOR -->
+<header class="barra-superior">
+  <div class="izquierda">
+    <span class="logo">PersonalSoft</span>
+    <span class="titulo-app">Softy Delivery Center Manager</span>
+
+    <div class="buscador-global">
+      <span class="material-symbols-outlined">search</span>
+      <input type="text" placeholder="Búsqueda global..." />
+    </div>
+  </div>
+
+  <div class="derecha">
+    <div class="organizacion">
+      Organization: <strong>Stark Industries</strong>
+      <span class="material-symbols-outlined">expand_more</span>
+    </div>
+
+    <div class="campana">
+      <span class="material-symbols-outlined">notifications</span>
+      <span class="insignia">3</span>
+    </div>
+
+    <div class="avatar">JD</div>
+  </div>
+</header>
+
+<!-- CUERPO: menú a la izquierda + contenido a la derecha -->
+<div class="cuerpo">
+  <aside class="menu-lateral">
+    <nav>
+      @for (opcion of menu; track opcion.nombre) {
+        @if (opcion.ruta) {
+          <!-- Opción con ruta: es un link de verdad -->
+          <a class="item" [routerLink]="opcion.ruta" routerLinkActive="activo">
+            <span class="material-symbols-outlined">{{ opcion.icono }}</span>
+            {{ opcion.nombre }}
+          </a>
+        } @else {
+          <!-- Opción sin ruta: solo se ve -->
+          <div class="item">
+            <span class="material-symbols-outlined">{{ opcion.icono }}</span>
+            {{ opcion.nombre }}
+          </div>
+        }
+      }
+    </nav>
+
+    <button class="boton-colapsar">
+      <span class="material-symbols-outlined">chevron_left</span>
+    </button>
+  </aside>
+
+  <main class="contenido">
+    <router-outlet />
+  </main>
+</div>

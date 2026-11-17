@@ -1,0 +1,89 @@
+<!-- Título y botón -->
+<div class="encabezado">
+  <div>
+    <h1>Clients</h1>
+    <p>Manage and administer all client accounts.</p>
+  </div>
+  <button class="boton-azul">
+    <span class="material-symbols-outlined">add</span>
+    Create Client
+  </button>
+</div>
+
+<!-- Filtros (por ahora solo visuales) -->
+<div class="tarjeta filtros">
+  <div class="buscador">
+    <span class="material-symbols-outlined">search</span>
+    <input type="text" placeholder="Buscar por nombre de cliente..." />
+  </div>
+
+  <div class="filtros-derecha">
+    <select>
+      <option>Status</option>
+      <option>Active</option>
+      <option>Inactive</option>
+    </select>
+    <select>
+      <option>Project Count</option>
+      <option>0 - 10</option>
+      <option>11 - 20</option>
+      <option>20+</option>
+    </select>
+    <button class="boton-blanco">Clear filters</button>
+  </div>
+</div>
+
+<!-- Tabla -->
+<div class="tarjeta">
+  <table>
+    <thead>
+      <tr>
+        <th>CLIENT NAME</th>
+        <th>STATUS</th>
+        <th>TOTAL PROJECTS</th>
+        <th>TOTAL USERS</th>
+        <th>LAST UPDATE</th>
+        <th>ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Se repite una fila por cada cliente del arreglo -->
+      @for (cliente of clientes; track cliente.nombre) {
+        <tr>
+          <td>
+            <div class="nombre-cliente">
+              <span [class]="'inicial ' + cliente.color">{{ cliente.nombre[0] }}</span>
+              {{ cliente.nombre }}
+            </div>
+          </td>
+          <td>
+            <span class="estado" [class.inactivo]="cliente.estado === 'Inactive'">
+              ● {{ cliente.estado }}
+            </span>
+          </td>
+          <td>{{ cliente.proyectos }}</td>
+          <td>{{ cliente.usuarios }}</td>
+          <td>{{ cliente.actualizacion }}</td>
+          <td>
+            <button class="boton-icono">
+              <span class="material-symbols-outlined">more_vert</span>
+            </button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+
+  <!-- Pie de la tabla (paginación, solo visual por ahora) -->
+  <div class="pie">
+    <span>Showing 1 to 5 of 20 results</span>
+    <div class="paginas">
+      <button class="boton-icono" disabled>
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <button class="boton-icono">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+</div>

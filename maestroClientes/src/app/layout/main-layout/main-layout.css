@@ -1,0 +1,162 @@
+/* :host es el componente completo. Lo hacemos ocupar toda la pantalla */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ---------- Barra superior ---------- */
+.barra-superior {
+  height: 60px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.izquierda,
+.derecha {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.titulo-app {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.buscador-global {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 190px;
+  padding: 6px 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #94a3b8;
+}
+
+.buscador-global input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 13px;
+}
+
+.organizacion {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.organizacion strong {
+  color: #1e293b;
+}
+
+.campana {
+  position: relative;
+  display: flex;
+  color: #64748b;
+}
+
+/* El circulito azul con el número */
+.insignia {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #334155;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Cuerpo ---------- */
+.cuerpo {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.menu-lateral {
+  width: 200px;
+  background: white;
+  border-right: 1px solid #e2e8f0;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* menú arriba, botón abajo */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #475569;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.item:hover {
+  background: #f1f5f9;
+}
+
+/* Opción seleccionada (Clientes) */
+.item.activo {
+  background: #e8f1fb;
+  color: #1d4ed8;
+}
+
+.boton-colapsar {
+  align-self: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  background: white;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido {
+  flex: 1;
+  overflow: auto;
+  padding: 24px 28px;
+}

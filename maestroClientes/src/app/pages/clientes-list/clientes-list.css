@@ -1,0 +1,192 @@
+/* ---------- Título ---------- */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.encabezado p {
+  margin-top: 4px;
+  color: #64748b;
+}
+
+/* ---------- Botones ---------- */
+.boton-azul {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #0b72d9;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.boton-blanco {
+  padding: 8px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #475569;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.boton-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #475569;
+  cursor: pointer;
+}
+
+/* En la tabla, el botón de los tres puntos no lleva borde */
+td .boton-icono {
+  border: none;
+}
+
+.boton-icono:disabled {
+  color: #cbd5e1;
+  cursor: default;
+}
+
+/* ---------- Tarjetas blancas ---------- */
+.tarjeta {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+/* ---------- Filtros ---------- */
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+}
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 320px;
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  color: #94a3b8;
+}
+
+.buscador input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+}
+
+.filtros-derecha {
+  display: flex;
+  gap: 8px;
+}
+
+select {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  color: #475569;
+  font-size: 13px;
+}
+
+/* ---------- Tabla ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  padding: 14px 20px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+  color: #475569;
+}
+
+.nombre-cliente {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+/* Cuadrito con la inicial */
+.inicial {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.azul { background: #dbeafe; color: #2563eb; }
+.oscuro { background: #0f172a; color: white; }
+.gris { background: #f1f5f9; color: #475569; }
+
+/* Etiqueta Active / Inactive */
+.estado {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #d1fae5;
+  color: #047857;
+  font-size: 12px;
+}
+
+.estado.inactivo {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+/* ---------- Pie de tabla ---------- */
+.pie {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.paginas {
+  display: flex;
+  gap: 8px;
+}
